@@ -9,7 +9,7 @@ const AboutPage = () => {
             <Box className='container'>
                 <Box className='left'>
                     <Typography className='desc'>
-                        👋 Hey there! I'm Anshuman Kundu, a passionate Full Stack Developer with a knack for crafting immersive web experiences. With a solid foundation in Computer Science from NIT Bhopal, where I graduated in [Year], I've been delving into the world of technology since the moment I stepped into the classroom.
+                        👋 Hey there! I'm Anshuman Kundu, a passionate Full Stack Developer with a knack for crafting immersive web experiences. With a solid foundation in Computer Science from NIT Bhopal, where I graduated in 2023, I've been delving into the world of technology since the moment I stepped into the classroom.
 
                         During my time at NIT Bhopal, I honed my skills in software development, learning the ins and outs of algorithms, data structures, and the latest programming languages. Armed with this knowledge, I embarked on a journey to explore the vast landscape of web development.
 
