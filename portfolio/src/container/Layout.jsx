@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Routes, Route } from "react-router-dom"
 import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import HomePage from "../pages/HomePage";
+import AboutPage from '../pages/AboutPage';
 const Layout = () => {
     return (
         <Root>
@@ -11,6 +12,7 @@ const Layout = () => {
                 <div className='content'>
                     <Routes>
                         <Route path='/' element={<HomePage />} />
+                        <Route path='/about' element={<AboutPage />} />
                     </Routes>
                 </div>
             </main>

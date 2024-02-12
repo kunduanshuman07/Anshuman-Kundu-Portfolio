@@ -10,10 +10,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { useNavigate } from 'react-router-dom';
 
 const pages = ['About', 'Work', 'Connect'];
 
 function ResponsiveAppBar() {
+  const navigate = useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -23,7 +25,9 @@ function ResponsiveAppBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+  const handleAbout = () => {
+    navigate('/about');
+  }
 
   return (
     <AppBar position="static" sx={{backgroundColor: "#252A40"}}>
@@ -105,7 +109,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={page==='About'?handleAbout: ""}
                 sx={{ my: 2, color: 'white', display: 'block', textTransform: "none", marginLeft: page==="About"? "auto": "10px", fontWeight: "bold" }}
               >
                 {page}

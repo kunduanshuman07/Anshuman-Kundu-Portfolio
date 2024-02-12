@@ -93,6 +93,7 @@ const Root = styled.div`
 .links{
   margin: auto;
 }
+}
 `
 
 export default HomePage
