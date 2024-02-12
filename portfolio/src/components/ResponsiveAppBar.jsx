@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['About', 'Work', 'Connect'];
+const pages = ['About', 'Work', 'Skills','Connect'];
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
@@ -28,9 +28,17 @@ function ResponsiveAppBar() {
   const handleAbout = () => {
     navigate('/about');
   }
-
+  const handleWork = () => {
+    navigate('/work');
+  }
+  const handleConnect = () => {
+    navigate('/connect');
+  }
+  const handleSkills = () => {
+    navigate('/skills');
+  }
   return (
-    <AppBar position="static" sx={{backgroundColor: "#252A40"}}>
+    <AppBar position="static" sx={{ backgroundColor: "#252A40" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -51,7 +59,7 @@ function ResponsiveAppBar() {
             Anshuman Kundu
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -109,8 +117,8 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={page==='About'?handleAbout: ""}
-                sx={{ my: 2, color: 'white', display: 'block', textTransform: "none", marginLeft: page==="About"? "auto": "10px", fontWeight: "bold" }}
+                onClick={page === 'About' ? handleAbout : page === "Work" ? handleWork :page === "Connect" ? handleConnect: page === "Skills" ? handleSkills:""}
+                sx={{ my: 2, color: 'white', display: 'block', textTransform: "none", marginLeft: page === "About" ? "auto" : "10px", fontWeight: "bold" }}
               >
                 {page}
               </Button>
